@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+
+    <style>
+        body{
+            background-color: rgb(51, 85, 158);
+            color: #fff;
+            font: normal 18px Arial;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <h1>Iniciando os estudos com o DOM</h1>
+    <p>Resultado</p>
+    <p>Aprendendo o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div>
+    <!--
+        <div name="msg">Clique em mim</div>
+        <div class="msg">Clique em mim</div>
+    -->
+
+
+    <script>
+        // DOM
+        /*
+            document.write('Olá, Mundo')                // Maneira simples de escrever uma linha;
+            document.write(document.charset)            // Tipo de set de caracteres (UTF-8);
+            document.write(window.navigator.appName)    // No caso o Chrome comporta como 'Netscape';
+            document.write(document.URL)                // A URL do site;
+        */
+
+
+        // Selecionando por Marca (tag HTMl)
+        /*
+            var p1 = document.getElementsByTagName('p')[1]   // Seleciona pela tag 'p' na linha em []. Começa em 0;
+            var corpo = document.body                        // Seleciona pela tag 'body';
+
+            document.write(p1.innerText)            // Escreve o texto de p1;
+            p1.style.color = 'blue'                 // Troca a cor de texto;
+
+            corpo.style.background = 'black'        // Troca a cor de fundo; 
+        
+            document.write(p1.innerText)            // Só pega o texto sem as tags de formatação HTML;
+            document.write(p1.innerHTML)            // Pega as tags HTML junto com o texto;
+        */
+
+        // Selecionando por ID
+        /*
+            var d = document.getElementById('msg')
+            d.style.background = 'green'
+            d.innerText = 'Estou aguardando...'
+
+            document.getElementById('msg').innerText = 'Olá!'
+        */
+
+        // Selecionar por Nome
+        /*
+            var d = document.getElementsByName('msg')[0]
+            d.innerText = 'Olá!'
+        */
+
+        // Selecionar por Class
+        /*
+            var d = document.getElementsByClassName('msg')[0]
+            d.innerText = 'Tudo bem?'
+        */
+
+        // Selecionar por Seletor
+        /*
+            var d = document.querySelector('div#msg')   // Marcador + class(.) ou id(#)
+            d.style.color = 'black'
+        */
+    </script>
+</body>
+</html>
